@@ -1,14 +1,14 @@
-package com.socialWeb.qanda.dao;
+package com.socialWeb.article.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 
-import com.socialWeb.qanda.pojo.Reply;
+import com.socialWeb.article.pojo.Channel;
 /**
  * 数据访问接口
  * @author Administrator
  *
  */
-public interface ReplyDao extends JpaRepository<Reply,String>,JpaSpecificationExecutor<Reply>{
+public interface ChannelDao extends JpaRepository<Channel,String>,JpaSpecificationExecutor<Channel>{
 	
 }

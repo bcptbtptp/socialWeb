@@ -2,7 +2,7 @@ server:
   port: 9003
 spring: 
   application:  
-    name: socialWeb-qanda #
+    name: socialWeb-qa #
   datasource:  
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.116.128:3306/socialWeb_qa?characterEncoding=UTF8

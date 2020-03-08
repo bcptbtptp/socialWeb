@@ -1,4 +1,4 @@
-package com.socialWeb.qanda;
+package com.socialWeb.qa;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -15,5 +15,5 @@ public class QaApplication
 	public IdWorker idWorkker(){
 		return new IdWorker(1, 1);
 	}
-	
+
 }

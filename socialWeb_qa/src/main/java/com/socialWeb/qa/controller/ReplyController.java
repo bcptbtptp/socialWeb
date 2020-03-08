@@ -1,5 +1,4 @@
-package com.socialWeb.qanda.controller;
-import java.util.List;
+package com.socialWeb.qa.controller;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.socialWeb.qanda.pojo.Reply;
-import com.socialWeb.qanda.service.ReplyService;
+import com.socialWeb.qa.pojo.Reply;
+import com.socialWeb.qa.service.ReplyService;
 
 import entity.PageResult;
 import entity.Result;

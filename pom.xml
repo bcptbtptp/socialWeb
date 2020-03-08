@@ -12,6 +12,7 @@
         <module>socialWeb_base</module>
         <module>socialWeb_recruit</module>
         <module>socialWeb_qa</module>
+        <module>socialWeb_article</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,4 +1,4 @@
-package com.socialWeb.qanda.service;
+package com.socialWeb.article.service;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -21,8 +21,8 @@ import org.springframework.stereotype.Service;
 
 import util.IdWorker;
 
-import com.socialWeb.qanda.dao.ReplyDao;
-import com.socialWeb.qanda.pojo.Reply;
+import com.socialWeb.article.dao.ColumnDao;
+import com.socialWeb.article.pojo.Column;
 
 /**
  * 服务层
@@ -31,10 +31,10 @@ import com.socialWeb.qanda.pojo.Reply;
  *
  */
 @Service
-public class ReplyService {
+public class ColumnService {
 
 	@Autowired
-	private ReplyDao replyDao;
+	private ColumnDao columnDao;
 	
 	@Autowired
 	private IdWorker idWorker;
@@ -43,8 +43,8 @@ public class ReplyService {
 	 * 查询全部列表
 	 * @return
 	 */
-	public List<Reply> findAll() {
-		return replyDao.findAll();
+	public List<Column> findAll() {
+		return columnDao.findAll();
 	}
 
 	
@@ -55,10 +55,10 @@ public class ReplyService {
 	 * @param size
 	 * @return
 	 */
-	public Page<Reply> findSearch(Map whereMap, int page, int size) {
-		Specification<Reply> specification = createSpecification(whereMap);
+	public Page<Column> findSearch(Map whereMap, int page, int size) {
+		Specification<Column> specification = createSpecification(whereMap);
 		PageRequest pageRequest =  PageRequest.of(page-1, size);
-		return replyDao.findAll(specification, pageRequest);
+		return columnDao.findAll(specification, pageRequest);
 	}
 
 	
@@ -67,9 +67,9 @@ public class ReplyService {
 	 * @param whereMap
 	 * @return
 	 */
-	public List<Reply> findSearch(Map whereMap) {
-		Specification<Reply> specification = createSpecification(whereMap);
-		return replyDao.findAll(specification);
+	public List<Column> findSearch(Map whereMap) {
+		Specification<Column> specification = createSpecification(whereMap);
+		return columnDao.findAll(specification);
 	}
 
 	/**
@@ -77,25 +77,25 @@ public class ReplyService {
 	 * @param id
 	 * @return
 	 */
-	public Reply findById(String id) {
-		return replyDao.findById(id).get();
+	public Column findById(String id) {
+		return columnDao.findById(id).get();
 	}
 
 	/**
 	 * 增加
-	 * @param reply
+	 * @param column
 	 */
-	public void add(Reply reply) {
-		reply.setId( idWorker.nextId()+"" );
-		replyDao.save(reply);
+	public void add(Column column) {
+		column.setId( idWorker.nextId()+"" );
+		columnDao.save(column);
 	}
 
 	/**
 	 * 修改
-	 * @param reply
+	 * @param column
 	 */
-	public void update(Reply reply) {
-		replyDao.save(reply);
+	public void update(Column column) {
+		columnDao.save(column);
 	}
 
 	/**
@@ -103,7 +103,7 @@ public class ReplyService {
 	 * @param id
 	 */
 	public void deleteById(String id) {
-		replyDao.deleteById(id);
+		columnDao.deleteById(id);
 	}
 
 	/**
@@ -111,32 +111,32 @@ public class ReplyService {
 	 * @param searchMap
 	 * @return
 	 */
-	private Specification<Reply> createSpecification(Map searchMap) {
+	private Specification<Column> createSpecification(Map searchMap) {
 
-		return new Specification<Reply>() {
+		return new Specification<Column>() {
 
 			@Override
-			public Predicate toPredicate(Root<Reply> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
+			public Predicate toPredicate(Root<Column> root, CriteriaQuery<?> query, CriteriaBuilder cb) {
 				List<Predicate> predicateList = new ArrayList<Predicate>();
-                // 编号
+                // ID
                 if (searchMap.get("id")!=null && !"".equals(searchMap.get("id"))) {
                 	predicateList.add(cb.like(root.get("id").as(String.class), "%"+(String)searchMap.get("id")+"%"));
                 }
-                // 问题ID
-                if (searchMap.get("problemid")!=null && !"".equals(searchMap.get("problemid"))) {
-                	predicateList.add(cb.like(root.get("problemid").as(String.class), "%"+(String)searchMap.get("problemid")+"%"));
+                // 专栏名称
+                if (searchMap.get("name")!=null && !"".equals(searchMap.get("name"))) {
+                	predicateList.add(cb.like(root.get("name").as(String.class), "%"+(String)searchMap.get("name")+"%"));
                 }
-                // 回答内容
-                if (searchMap.get("content")!=null && !"".equals(searchMap.get("content"))) {
-                	predicateList.add(cb.like(root.get("content").as(String.class), "%"+(String)searchMap.get("content")+"%"));
+                // 专栏简介
+                if (searchMap.get("summary")!=null && !"".equals(searchMap.get("summary"))) {
+                	predicateList.add(cb.like(root.get("summary").as(String.class), "%"+(String)searchMap.get("summary")+"%"));
                 }
-                // 回答人ID
+                // 用户ID
                 if (searchMap.get("userid")!=null && !"".equals(searchMap.get("userid"))) {
                 	predicateList.add(cb.like(root.get("userid").as(String.class), "%"+(String)searchMap.get("userid")+"%"));
                 }
-                // 回答人昵称
-                if (searchMap.get("nickname")!=null && !"".equals(searchMap.get("nickname"))) {
-                	predicateList.add(cb.like(root.get("nickname").as(String.class), "%"+(String)searchMap.get("nickname")+"%"));
+                // 状态
+                if (searchMap.get("state")!=null && !"".equals(searchMap.get("state"))) {
+                	predicateList.add(cb.like(root.get("state").as(String.class), "%"+(String)searchMap.get("state")+"%"));
                 }
 				
 				return cb.and( predicateList.toArray(new Predicate[predicateList.size()]));

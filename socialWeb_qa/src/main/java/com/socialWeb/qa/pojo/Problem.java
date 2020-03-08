@@ -1,4 +1,4 @@
-package com.socialWeb.qanda.pojo;
+package com.socialWeb.qa.pojo;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;

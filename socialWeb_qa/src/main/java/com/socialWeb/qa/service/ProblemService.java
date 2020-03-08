@@ -1,28 +1,25 @@
-package com.socialWeb.qanda.service;
+package com.socialWeb.qa.service;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import javax.persistence.criteria.Selection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
 import util.IdWorker;
 
-import com.socialWeb.qanda.dao.ProblemDao;
-import com.socialWeb.qanda.pojo.Problem;
+import com.socialWeb.qa.dao.ProblemDao;
+import com.socialWeb.qa.pojo.Problem;
 
 /**
  * 服务层
@@ -38,6 +35,21 @@ public class ProblemService {
 	
 	@Autowired
 	private IdWorker idWorker;
+
+	public Page<Problem> newlist(String labelid, int page, int rows){
+		Pageable pageable = PageRequest.of(page - 1, rows);
+		return problemDao.newlist(labelid, pageable);
+	}
+
+	public Page<Problem> hotlist(String labelid, int page, int rows){
+		Pageable pageable = PageRequest.of(page - 1, rows);
+		return problemDao.hotlist(labelid, pageable);
+	}
+
+	public Page<Problem> waitlist(String labelid, int page, int rows){
+		Pageable pageable = PageRequest.of(page - 1, rows);
+		return problemDao.waitlist(labelid, pageable);
+	}
 
 	/**
 	 * 查询全部列表

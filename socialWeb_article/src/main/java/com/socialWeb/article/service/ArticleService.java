@@ -18,6 +18,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 import util.IdWorker;
@@ -40,6 +41,9 @@ public class ArticleService {
 	
 	@Autowired
 	private IdWorker idWorker;
+
+	@Autowired
+	private RedisTemplate redisTemplate;
 
 	public void updateState(String id){
 		articleDao.updateState(id);
@@ -88,7 +92,12 @@ public class ArticleService {
 	 * @return
 	 */
 	public Article findById(String id) {
-		return articleDao.findById(id).get();
+		Article article = (Article) redisTemplate.opsForValue().get("article_" + id);
+		if (null == article){
+			article = articleDao.findById(id).get();
+			redisTemplate.opsForValue().set("article_" + id, article);
+		}
+		return article;
 	}
 
 	/**
@@ -105,6 +114,7 @@ public class ArticleService {
 	 * @param article
 	 */
 	public void update(Article article) {
+		redisTemplate.delete("article_" + article.getId());
 		articleDao.save(article);
 	}
 
@@ -113,6 +123,7 @@ public class ArticleService {
 	 * @param id
 	 */
 	public void deleteById(String id) {
+		redisTemplate.delete("article_" + id);
 		articleDao.deleteById(id);
 	}
 

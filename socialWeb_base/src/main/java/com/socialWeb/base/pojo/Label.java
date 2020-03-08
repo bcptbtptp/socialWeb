@@ -1,6 +1,6 @@
 package com.socialWeb.base.pojo;
-
 import java.io.Serializable;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -18,11 +18,16 @@ public class Label implements Serializable
 {
 	@Id
 	private String id;
-	private String labelName;//标签名称
-	private String state;//状态
-	private Long count;//使用数量
-	private Long fans;//关注数
-	private String recommend;//是否推荐
+	//标签名称
+	private String labelname;
+	//状态
+	private String state;
+	//使用数量
+	private Long count;
+	//关注数
+	private Long fans;
+	//是否推荐
+	private String recommend;
 
 	public String getId() {
 		return id;
@@ -32,12 +37,12 @@ public class Label implements Serializable
 		this.id = id;
 	}
 
-	public String getLabelName() {
-		return labelName;
+	public String getLabelname() {
+		return labelname;
 	}
 
-	public void setLabelName(String labelName) {
-		this.labelName = labelName;
+	public void setLabelname(String labelname) {
+		this.labelname = labelname;
 	}
 
 	public String getState() {

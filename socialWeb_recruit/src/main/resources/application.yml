@@ -1,0 +1,13 @@
+server: 
+  port: 9002
+spring: 
+  application:  
+    name: socialWeb-recruit
+  datasource:  
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.116.128:3306/socialWeb_recruit?characterEncoding=UTF8
+    username: root
+    password: root
+  jpa: 
+    database: mysql
+    show-sql: true

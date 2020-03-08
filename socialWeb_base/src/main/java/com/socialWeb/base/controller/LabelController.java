@@ -1,11 +1,12 @@
 package com.socialWeb.base.controller;
 import com.socialWeb.base.pojo.Label;
 import com.socialWeb.base.service.LabelService;
+import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
-import	java.lang.annotation.RetentionPolicy;
-import	java.lang.annotation.Retention;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -54,5 +55,17 @@ public class LabelController
 	public Result deleteById(@PathVariable("labelId") String labelId){
 		labelService.deleteById(labelId);
 		return new Result(true,StatusCode.OK,"删除成功");
+	}
+
+	@RequestMapping(value="/search",method=RequestMethod.POST)
+	public Result findSearch(@RequestBody Label label){
+		List<Label> list = labelService.findSearch(label);
+		return new Result(true,StatusCode.OK,"查询成功", list);
+	}
+
+	@RequestMapping(value="/search/{page}/{size}",method=RequestMethod.POST)
+	public Result pageQuery(@RequestBody Label label, @PathVariable int page, @PathVariable int size){
+		Page<Label> pageData = labelService.pageQuery(label, page, size);
+		return new Result(true,StatusCode.OK,"查询成功", new PageResult<Label>(pageData.getTotalElements(),pageData.getContent()));
 	}
 }

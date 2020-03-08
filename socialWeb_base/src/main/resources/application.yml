@@ -2,12 +2,12 @@ server:
   port: 9001
 spring:
   application:
-  name: socialWeb #指定服务名
-datasource:
-  driverClassName: com.mysql.jdbc.Driver
-  url: jdbc:mysql://192.168.116.128:3306/socialWeb-base?characterEncoding=utf-8
-  username: root
-  password: root
-jpa:
-  database: mysql
-  show‐sql: true
+    name: socialWeb-base
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.116.128:3306/socialWeb_base?characterEncoding=utf-8
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    show‐sql: true

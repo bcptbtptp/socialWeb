@@ -12,11 +12,11 @@
         <module name="socialWeb_gathering" />
         <module name="socialWeb_qa" />
         <module name="socialWeb_recruit" />
+        <module name="socialWeb_search" />
         <module name="socialWeb_spit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="socialWeb_qa" target="1.8" />
       <module name="socialWeb_qam" target="1.8" />
     </bytecodeTargetLevel>
   </component>
@@ -29,6 +29,7 @@
       <module name="socialWeb_qa" options="-parameters" />
       <module name="socialWeb_qam" options="-parameters" />
       <module name="socialWeb_recruit" options="-parameters" />
+      <module name="socialWeb_search" options="-parameters" />
       <module name="socialWeb_spit" options="-parameters" />
     </option>
   </component>

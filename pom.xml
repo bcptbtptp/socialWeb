@@ -16,6 +16,8 @@
         <module>socialWeb_gathering</module>
         <module>socialWeb_spit</module>
         <module>socialWeb_search</module>
+        <module>socialWeb_user</module>
+        <module>socialWeb_sms</module>
     </modules>
     <packaging>pom</packaging>
 

@@ -1,4 +1,5 @@
 package com.socialWeb.qa.controller;
+import com.socialWeb.qa.client.BaseClient;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,6 +33,15 @@ public class ProblemController {
 
 	@Autowired
 	private HttpServletRequest request;
+
+	@Autowired
+	private BaseClient baseClient;
+
+	@RequestMapping(value="/label/{id}", method = RequestMethod.GET)
+	public Result findByLabelId(@PathVariable String id){
+		Result result = baseClient.findById(id);
+		return result;
+	}
 
 	@RequestMapping(value = "/newlist/{labelid}/{page}/{size}", method = RequestMethod.GET)
 	public Result newlist(@PathVariable String labelid, @PathVariable int page, @PathVariable int size){

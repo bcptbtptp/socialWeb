@@ -1,8 +1,10 @@
 package com.socialWeb.user.controller;
 import	java.awt.font.NumericShaper.Range;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.jws.Oneway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -19,6 +21,8 @@ import com.socialWeb.user.service.UserService;
 import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
+import util.JwtUtil;
+
 /**
  * 控制器层
  * @author Administrator
@@ -35,13 +39,20 @@ public class UserController {
 	@Autowired
 	private RedisTemplate redisTemplate;
 
+	@Autowired
+	private JwtUtil jwtUtil;
+
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public Result login(@RequestBody User user){
 		user = userService.login(user.getMobile(), user.getPassword());
 		if (null == user){
 			return new Result(false, StatusCode.ERROR, "登录失败");
 		}
-		return new Result(true, StatusCode.OK, "登录成功");
+		String token = jwtUtil.createJWT(user.getId(), user.getMobile(), "user");
+		Map<String, Object> map = new HashMap<>();
+		map.put("token", token);
+		map.put("roles", "user");
+		return new Result(true, StatusCode.OK, "登录成功", map);
 	}
 
 	@RequestMapping(value = "/register/{code}", method = RequestMethod.POST)

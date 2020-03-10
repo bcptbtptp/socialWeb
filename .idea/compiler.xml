@@ -19,7 +19,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="socialWeb_qa" target="1.8" />
       <module name="socialWeb_qam" target="1.8" />
     </bytecodeTargetLevel>
   </component>

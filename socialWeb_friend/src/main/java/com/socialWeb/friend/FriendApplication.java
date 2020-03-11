@@ -1,25 +1,32 @@
-package com.socialWeb.article;
+package com.socialWeb.friend;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
-import util.IdWorker;
+import util.JwtUtil;
+
+/**
+ * @ClassName FriendApplication
+ * @Description TODO
+ * @Author 42
+ * @Date 2020/3/11 上午 9:42
+ * @Version 1.0
+ */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
 @EnableFeignClients
-public class ArticleApplication
+public class FriendApplication
 {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ArticleApplication.class, args);
+	public static void main(String[] args){
+		SpringApplication.run(FriendApplication.class, args);
 	}
 
 	@Bean
-	public IdWorker idWorkker(){
-		return new IdWorker(1, 1);
+	public JwtUtil jwtUtil(){
+		return new JwtUtil();
 	}
-	
 }

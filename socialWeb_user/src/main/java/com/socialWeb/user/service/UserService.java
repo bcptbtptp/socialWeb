@@ -1,20 +1,16 @@
 package com.socialWeb.user.service;
-import io.jsonwebtoken.Claims;
 import java.util.Date;
 import	java.util.HashMap;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 
 import java.util.concurrent.TimeUnit;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Expression;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
-import javax.persistence.criteria.Selection;
 
 import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.RandomStringUtils;
@@ -22,7 +18,6 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -208,7 +203,7 @@ public class UserService {
 
 	public User login(String mobile, String password) {
 		User user = userDao.findByMobile(mobile);
-		if (null != user && encoder.matches(password, user.getPassword())){
+		if (user != null && encoder.matches(password, user.getPassword())){
 			return user;
 		}
 		return null;

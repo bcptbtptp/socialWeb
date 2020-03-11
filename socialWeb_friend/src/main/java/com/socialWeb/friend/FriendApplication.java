@@ -12,7 +12,7 @@ import util.JwtUtil;
  * @ClassName FriendApplication
  * @Description TODO
  * @Author 42
- * @Date 2020/3/11 上午 9:42
+ * @Date 2020/3/11 下午 3:44
  * @Version 1.0
  */
 @SpringBootApplication

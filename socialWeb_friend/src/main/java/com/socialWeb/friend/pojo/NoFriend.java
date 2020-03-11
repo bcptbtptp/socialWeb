@@ -2,24 +2,25 @@ package com.socialWeb.friend.pojo;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
-import org.springframework.data.annotation.Id;
 
 /**
- * @ClassName Friend
+ * @ClassName NoFriend
  * @Description TODO
  * @Author 42
- * @Date 2020/3/11 上午 9:51
+ * @Date 2020/3/11 下午 3:49
  * @Version 1.0
  */
 @Entity
-@Table(name="sc_nofriend")
+@Table(name = "sc_nofriend")
 @IdClass(NoFriend.class)
 public class NoFriend implements Serializable
 {
 	@Id
 	private String userid;
+
 	@Id
 	private String friendid;
 
@@ -38,5 +39,4 @@ public class NoFriend implements Serializable
 	public void setFriendid(String friendid) {
 		this.friendid = friendid;
 	}
-
 }

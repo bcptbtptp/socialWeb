@@ -1,0 +1,40 @@
+server:
+  port: 9012
+spring:
+  application:
+    name: socialWeb-web
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka
+  instance:
+    prefer-ip-address: true
+zuul:
+  routes:
+    socialWeb-base:
+      path: /base/**
+      serviceId: socialWeb-base
+    socialWeb-article:
+      path: /article/**
+      serviceId: socialWeb-article
+    socialWeb-friend:
+      path: /friend/**
+      serviceId: socialWeb-friend
+    socialWeb-gathering:
+      path: /gathering/**
+      serviceId: socialWeb-gathering
+    socialWeb-qa:
+      path: /qa/**
+      serviceId: socialWeb-qa
+    socialWeb-recruit:
+      path: /recruit/**
+      serviceId: socialWeb-recruit
+    socialWeb-search:
+      path: /search/**
+      serviceId: socialWeb-search
+    socialWeb-spit:
+      path: /search/**
+      serviceId: socialWeb-search
+    socialWeb-user:
+      path: /user/**
+      serviceId: socialWeb-user

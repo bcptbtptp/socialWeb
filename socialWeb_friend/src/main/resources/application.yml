@@ -1,0 +1,26 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: socialWeb-friend #指定服务名
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.116.128:3306/socialWeb_friend?characterEncoding=UTF8
+    username: root
+    password: root
+  jpa:
+    database: MySQL
+    show-sql: true
+  redis:
+    host: 192.168.116.128
+  rabbitmq:
+    host: 192.168.116.128
+jwt:
+  config:
+    key: blitz
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6868/eureka/
+  instance:
+    prefer-ip-address: true

@@ -2,28 +2,30 @@ package com.socialWeb.friend.pojo;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.Table;
-import org.springframework.data.annotation.Id;
 
 /**
  * @ClassName Friend
  * @Description TODO
  * @Author 42
- * @Date 2020/3/11 上午 9:51
+ * @Date 2020/3/11 下午 3:49
  * @Version 1.0
  */
 @Entity
-@Table(name="sc_friend")
+@Table(name = "sc_friend")
 @IdClass(Friend.class)
 public class Friend implements Serializable
 {
 	@Id
 	private String userid;
+
 	@Id
 	private String friendid;
 
-	private String isLike;
+	private String islike;
+
 	public String getUserid() {
 		return userid;
 	}
@@ -40,11 +42,11 @@ public class Friend implements Serializable
 		this.friendid = friendid;
 	}
 
-	public String getIsLike() {
-		return isLike;
+	public String getIslike() {
+		return islike;
 	}
 
-	public void setIsLike(String isLike) {
-		this.isLike = isLike;
+	public void setIslike(String islike) {
+		this.islike = islike;
 	}
 }

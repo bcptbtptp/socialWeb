@@ -20,6 +20,10 @@
         <module>socialWeb_sms</module>
         <module>socialWeb_eureka</module>
         <module>socialWeb_friend</module>
+        <module>socialWeb_friend</module>
+        <module>socialWeb_management</module>
+        <module>socialWeb_manager</module>
+        <module>socialWeb_web</module>
     </modules>
     <packaging>pom</packaging>
 

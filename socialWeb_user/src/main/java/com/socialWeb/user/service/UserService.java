@@ -208,4 +208,8 @@ public class UserService {
 		}
 		return null;
 	}
+
+	public void incFollowcount(String userid,int x){
+		userDao.incFollowcount(userid,x);
+	}
 }

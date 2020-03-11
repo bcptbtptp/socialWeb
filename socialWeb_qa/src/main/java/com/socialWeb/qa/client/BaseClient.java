@@ -1,5 +1,6 @@
 package com.socialWeb.qa.client;
 
+import com.socialWeb.qa.client.impl.BaseClientImpl;
 import entity.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Date 2020/3/10 下午 5:04
  * @Version 1.0
  */
-@FeignClient(name = "socialWeb-base")
+@FeignClient(name = "socialWeb-base", fallback = BaseClientImpl.class)
 public interface BaseClient
 {
 	@RequestMapping(value="/label/{id}", method = RequestMethod.GET)

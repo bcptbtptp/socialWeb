@@ -20,7 +20,6 @@
         <module>socialweb_sms</module>
         <module>socialweb_eureka</module>
         <module>socialweb_friend</module>
-        <module>socialweb_friend</module>
         <module>socialweb_manager</module>
         <module>socialweb_web</module>
         <module>socialweb_config</module>

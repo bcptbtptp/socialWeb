@@ -1,0 +1,5 @@
+com\socialweb\search\controller\ArticleController.class
+com\socialweb\search\pojo\Article.class
+com\socialweb\search\dao\ArticleDao.class
+com\socialweb\search\service\ArticleService.class
+com\socialweb\search\SearchApplication.class

@@ -1,0 +1,14 @@
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\client\BaseClient.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\pojo\Reply.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\QaApplication.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\client\impl\BaseClientImpl.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\controller\ReplyController.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\service\ProblemService.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\dao\ProblemDao.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\service\ReplyService.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\controller\BaseExceptionHandler.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\controller\ProblemController.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\config\InterceptorConfig.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\interceptor\JwtInterceptor.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\pojo\Problem.java
+E:\WorkSpace\Idea\socialWeb_main\socialWeb_qa\src\main\java\com\socialWeb\qa\dao\ReplyDao.java

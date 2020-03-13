@@ -1,0 +1,8 @@
+com\socialWeb\base\service\LabelService$2.class
+com\socialWeb\base\BaseApplication.class
+com\socialWeb\base\pojo\Label.class
+com\socialWeb\base\service\LabelService.class
+com\socialWeb\base\controller\BaseExceptionHandler.class
+com\socialWeb\base\controller\LabelController.class
+com\socialWeb\base\dao\LabelDao.class
+com\socialWeb\base\service\LabelService$1.class

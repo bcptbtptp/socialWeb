@@ -1,0 +1,10 @@
+com\socialWeb\friend\dao\NoFriendDao.class
+com\socialWeb\friend\FriendApplication.class
+com\socialWeb\friend\dao\FriendDao.class
+com\socialWeb\friend\controller\FriendController.class
+com\socialWeb\friend\pojo\Friend.class
+com\socialWeb\friend\client\UserClient.class
+com\socialWeb\friend\pojo\NoFriend.class
+com\socialWeb\friend\interceptor\JwtInterceptor.class
+com\socialWeb\friend\config\InterceptorConfig.class
+com\socialWeb\friend\service\FriendService.class

@@ -1,0 +1,5 @@
+com\socialweb\spit\SpitApplication.class
+com\socialweb\spit\service\SpitService.class
+com\socialweb\spit\controller\SpitController.class
+com\socialweb\spit\pojo\Spit.class
+com\socialweb\spit\dao\SpitDao.class

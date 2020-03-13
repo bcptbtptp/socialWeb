@@ -1,0 +1,7 @@
+com\socialWeb\gathering\controller\BaseExceptionHandler.class
+com\socialWeb\gathering\controller\GatheringController.class
+com\socialWeb\gathering\service\GatheringService.class
+com\socialWeb\gathering\pojo\Gathering.class
+com\socialWeb\gathering\GatheringApplication.class
+com\socialWeb\gathering\dao\GatheringDao.class
+com\socialWeb\gathering\service\GatheringService$1.class

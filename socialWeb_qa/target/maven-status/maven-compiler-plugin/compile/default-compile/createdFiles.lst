@@ -1,0 +1,16 @@
+com\socialWeb\qa\config\InterceptorConfig.class
+com\socialWeb\qa\dao\ReplyDao.class
+com\socialWeb\qa\service\ProblemService$1.class
+com\socialWeb\qa\service\ReplyService$1.class
+com\socialWeb\qa\dao\ProblemDao.class
+com\socialWeb\qa\controller\ReplyController.class
+com\socialWeb\qa\interceptor\JwtInterceptor.class
+com\socialWeb\qa\client\BaseClient.class
+com\socialWeb\qa\controller\ProblemController.class
+com\socialWeb\qa\client\impl\BaseClientImpl.class
+com\socialWeb\qa\pojo\Reply.class
+com\socialWeb\qa\service\ReplyService.class
+com\socialWeb\qa\controller\BaseExceptionHandler.class
+com\socialWeb\qa\QaApplication.class
+com\socialWeb\qa\pojo\Problem.class
+com\socialWeb\qa\service\ProblemService.class

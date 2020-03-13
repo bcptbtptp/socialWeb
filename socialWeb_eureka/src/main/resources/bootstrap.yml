@@ -4,4 +4,4 @@ spring:
       name: eureka
       profile: test
       label: master
-      uri: http://127.0.0.1:12000
+      uri: http://192.168.136.129:12000

@@ -2,13 +2,10 @@
 <project version="4">
   <component name="Encoding" addBOMForNewFiles="with NO BOM">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/socialWeb_article" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/socialWeb_base" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/socialWeb_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socialWeb_config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_friend" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_gathering" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/socialWeb_manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_manager" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_qa" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_recruit" charset="UTF-8" />
@@ -17,5 +14,8 @@
     <file url="file://$PROJECT_DIR$/socialWeb_spit" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_user" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/socialWeb_web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socialweb_article" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socialweb_base" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/socialweb_common" charset="UTF-8" />
   </component>
 </project>

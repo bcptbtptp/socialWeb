@@ -1,0 +1,21 @@
+server:
+  port: 12000
+spring:
+  application:
+    name: socialWeb-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/blitzgg/socialWeb_config.git
+          username: 13980763271
+          password: Gong@4113
+          default-label: master
+          skip-ssl-validation: true
+  rabbitmq:
+    host: 192.168.136.129
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh

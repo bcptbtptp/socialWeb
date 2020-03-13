@@ -5,25 +5,25 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.blitz</groupId>
-    <artifactId>socialWeb_main</artifactId>
+    <artifactId>socialweb_main</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>socialWeb_common</module>
-        <module>socialWeb_base</module>
-        <module>socialWeb_recruit</module>
-        <module>socialWeb_qa</module>
-        <module>socialWeb_article</module>
-        <module>socialWeb_gathering</module>
-        <module>socialWeb_spit</module>
-        <module>socialWeb_search</module>
-        <module>socialWeb_user</module>
-        <module>socialWeb_sms</module>
-        <module>socialWeb_eureka</module>
-        <module>socialWeb_friend</module>
-        <module>socialWeb_friend</module>
-        <module>socialWeb_management</module>
-        <module>socialWeb_manager</module>
-        <module>socialWeb_web</module>
+        <module>socialweb_common</module>
+        <module>socialweb_base</module>
+        <module>socialweb_recruit</module>
+        <module>socialweb_qa</module>
+        <module>socialweb_article</module>
+        <module>socialweb_gathering</module>
+        <module>socialweb_spit</module>
+        <module>socialweb_search</module>
+        <module>socialweb_user</module>
+        <module>socialweb_sms</module>
+        <module>socialweb_eureka</module>
+        <module>socialweb_friend</module>
+        <module>socialweb_friend</module>
+        <module>socialweb_manager</module>
+        <module>socialweb_web</module>
+        <module>socialweb_config</module>
     </modules>
     <packaging>pom</packaging>
 

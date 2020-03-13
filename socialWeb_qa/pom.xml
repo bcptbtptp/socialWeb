@@ -2,10 +2,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.blitz</groupId>
-    <artifactId>socialWeb_main</artifactId>
+    <artifactId>socialweb_main</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>socialWeb_qa</artifactId>
+  <artifactId>socialweb_qa</artifactId>
   <dependencies>
  		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -17,7 +17,7 @@
 		</dependency>
 		<dependency>
 			<groupId>com.blitz</groupId>
-			<artifactId>socialWeb_common</artifactId>
+			<artifactId>socialweb_common</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
 	  <dependency>
@@ -27,6 +27,24 @@
 	  <dependency>
 		  <groupId>org.springframework.cloud</groupId>
 		  <artifactId>spring-cloud-starter-openfeign</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-starter-config</artifactId>
+		  <version>2.2.0.RELEASE</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-bus</artifactId>
+		  <version>2.2.0.BUILD-SNAPSHOT</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework.cloud</groupId>
+		  <artifactId>spring-cloud-stream-binder-rabbit</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-actuator</artifactId>
 	  </dependency>
   </dependencies>  
 </project>

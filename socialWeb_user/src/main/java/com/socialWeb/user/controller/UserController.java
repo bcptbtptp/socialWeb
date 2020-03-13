@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.jws.Oneway;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -31,6 +32,7 @@ import util.JwtUtil;
 @RestController
 @CrossOrigin
 @RequestMapping("/user")
+@RefreshScope
 public class UserController {
 
 	@Autowired

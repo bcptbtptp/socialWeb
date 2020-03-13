@@ -6,20 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="socialWeb_article" />
-        <module name="socialWeb_base" />
-        <module name="socialWeb_common" />
-        <module name="socialWeb_eureka" />
-        <module name="socialWeb_friend" />
-        <module name="socialWeb_gathering" />
-        <module name="socialWeb_manager" />
-        <module name="socialWeb_qa" />
-        <module name="socialWeb_recruit" />
-        <module name="socialWeb_search" />
-        <module name="socialWeb_sms" />
-        <module name="socialWeb_spit" />
-        <module name="socialWeb_user" />
-        <module name="socialWeb_web" />
+        <module name="socialweb_article" />
+        <module name="socialweb_base" />
+        <module name="socialweb_common" />
+        <module name="socialweb_config" />
+        <module name="socialweb_eureka" />
+        <module name="socialweb_friend" />
+        <module name="socialweb_gathering" />
+        <module name="socialweb_manager" />
+        <module name="socialweb_qa" />
+        <module name="socialweb_recruit" />
+        <module name="socialweb_search" />
+        <module name="socialweb_sms" />
+        <module name="socialweb_spit" />
+        <module name="socialweb_user" />
+        <module name="socialweb_web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -28,21 +29,22 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="socialWeb_article" options="-parameters" />
-      <module name="socialWeb_base" options="-parameters" />
-      <module name="socialWeb_common" options="-parameters" />
-      <module name="socialWeb_eureka" options="-parameters" />
-      <module name="socialWeb_friend" options="-parameters" />
-      <module name="socialWeb_gathering" options="-parameters" />
-      <module name="socialWeb_manager" options="-parameters" />
-      <module name="socialWeb_qa" options="-parameters" />
       <module name="socialWeb_qam" options="-parameters" />
-      <module name="socialWeb_recruit" options="-parameters" />
-      <module name="socialWeb_search" options="-parameters" />
-      <module name="socialWeb_sms" options="-parameters" />
-      <module name="socialWeb_spit" options="-parameters" />
-      <module name="socialWeb_user" options="-parameters" />
-      <module name="socialWeb_web" options="-parameters" />
+      <module name="socialweb_article" options="-parameters" />
+      <module name="socialweb_base" options="-parameters" />
+      <module name="socialweb_common" options="-parameters" />
+      <module name="socialweb_config" options="-parameters" />
+      <module name="socialweb_eureka" options="-parameters" />
+      <module name="socialweb_friend" options="-parameters" />
+      <module name="socialweb_gathering" options="-parameters" />
+      <module name="socialweb_manager" options="-parameters" />
+      <module name="socialweb_qa" options="-parameters" />
+      <module name="socialweb_recruit" options="-parameters" />
+      <module name="socialweb_search" options="-parameters" />
+      <module name="socialweb_sms" options="-parameters" />
+      <module name="socialweb_spit" options="-parameters" />
+      <module name="socialweb_user" options="-parameters" />
+      <module name="socialweb_web" options="-parameters" />
     </option>
   </component>
 </project>

@@ -46,7 +46,6 @@ public class SmsUtil {
         String accessKeyId = "";
 //        String accessKeySecret = env.getProperty("aliyun.sms.accessKeySecret");
         String accessKeySecret = "";
-
         //可自助调整超时时间
         System.setProperty("sun.net.client.defaultConnectTimeout", "10000");
         System.setProperty("sun.net.client.defaultReadTimeout", "10000");
